@@ -1,0 +1,421 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorPrimary"
+    android:padding="16dp">
+
+    <!-- User Account Section -->
+
+
+
+<ScrollView
+    android:id="@+id/more_scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:gravity="center_horizontal|top"
+            android:padding="32dp">
+
+
+            <com.softylogics.dreamai.CircleImageView
+                android:id="@+id/profile_picture"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_gravity="center"
+                android:src="@drawable/user_icon"
+                />
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Interesting Reads Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/interesting_reads"
+            android:textSize="18sp"
+            android:alpha="0.8"
+            style="@style/TextView"
+            android:layout_marginBottom="16dp"
+            android:textStyle="bold" />
+
+        <!-- Dream Symbol Guide -->
+        <LinearLayout
+            android:id="@+id/txtDreamGuide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_16sp"
+            android:background="@drawable/click_effect_rounded_light"
+
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+
+                android:tint="@color/primary"
+                android:alpha="0.9"
+                android:src="@drawable/baseline_link_24" />
+
+            <TextView
+
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dream_symbol_guide"
+                android:textSize="16sp"
+                android:alpha="0.8"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+            <LinearLayout
+                android:id="@+id/txtDreamInterpretationGuide"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_16sp"
+                android:background="@drawable/click_effect_rounded_dark"
+
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="5dp"
+
+                    android:tint="@color/primary"
+
+                    android:src="@drawable/baseline_link_24"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dream_interpretation_guide"
+                    android:textSize="16sp"
+                    android:alpha="0.8"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+    </LinearLayout>
+
+    <!-- Divider -->
+
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/manage_subscriptions"
+        android:textSize="18sp"
+        android:alpha="0.8"
+        android:textColor="@color/black"
+        android:layout_marginStart="16dp"
+        android:textStyle="bold" />
+    <!-- App Settings Options -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="16dp">
+
+        <LinearLayout
+            android:id="@+id/txtBuyPremium"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_16sp"
+            android:background="@drawable/click_effect_rounded_dark"
+
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+
+                android:tint="@color/primary"
+                android:alpha="0.9"
+                android:src="@drawable/baseline_sell_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/unlock_premium_feature"
+                android:textSize="16sp"
+                android:alpha="0.8"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+<!--        <LinearLayout-->
+<!--            android:id="@+id/txtRestoreSub"-->
+
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:padding="@dimen/dimen_16sp"-->
+<!--            android:background="@drawable/click_effect_rounded_light"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <androidx.appcompat.widget.AppCompatImageView-->
+<!--                android:layout_width="24dp"-->
+<!--                android:layout_height="24dp"-->
+<!--                android:layout_marginEnd="10dp"-->
+<!--                android:padding="5dp"-->
+
+<!--                android:tint="@color/primary"-->
+<!--                android:alpha="0.9"-->
+<!--                android:src="@drawable/baseline_subscriptions_24" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/restore_subscription"-->
+<!--                android:textSize="16sp"-->
+<!--                android:alpha="0.8"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold" />-->
+<!--        </LinearLayout>-->
+    </LinearLayout>
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/quick_actions"
+            android:textSize="18sp"
+            android:alpha="0.8"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+            <LinearLayout
+                android:id="@+id/txtFeedback"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_16sp"
+                android:background="@drawable/click_effect_rounded_light"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="5dp"
+
+                    android:tint="@color/primary"
+                    android:alpha="0.9"
+                    android:src="@drawable/baseline_feedback_24" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:text="@string/feedback"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+            android:id="@+id/txtShareApp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_16sp"
+            android:background="@drawable/click_effect_rounded_dark"
+
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+
+                android:tint="@color/primary"
+                android:alpha="0.9"
+                android:src="@drawable/baseline_share_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="@string/share_with_a_friend"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Privacy Policy -->
+        <LinearLayout
+            android:id="@+id/txtPrivacyPolicy"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_16sp"
+            android:background="@drawable/click_effect_rounded_light"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+
+                android:tint="@color/primary"
+                android:alpha="0.9"
+                android:src="@drawable/baseline_privacy_tip_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="@string/privacy_policy"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/txtRateApp"
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/dimen_16sp"
+            android:background="@drawable/click_effect_rounded_dark"
+
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="10dp"
+                android:padding="5dp"
+
+                android:tint="@color/primary"
+                android:alpha="0.9"
+                android:src="@drawable/baseline_star_rate_24" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:alpha="0.8"
+                android:text="@string/rate_the_app"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+        <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/user_hub"
+            android:textSize="18sp"
+            android:alpha="0.8"
+            android:textColor="@color/black"
+            android:layout_marginStart="16dp"
+            android:textStyle="bold" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="16dp">
+
+
+            <LinearLayout
+                android:id="@+id/favorites_in_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_16sp"
+                android:background="@drawable/click_effect_rounded_light"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="5dp"
+
+                    android:tint="@color/primary"
+                    android:alpha="0.9"
+                    android:src="@drawable/baseline_favorite_24" />
+
+                <TextView
+                    android:id="@+id/txtFav"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:text="@string/my_favorite_interpretations"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+
+                    android:textStyle="bold" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/login_out"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/dimen_16sp"
+                android:background="@drawable/click_effect_rounded_dark"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_marginEnd="10dp"
+                    android:padding="5dp"
+                    android:tint="@color/primary"
+                    android:alpha="0.9"
+                    android:src="@android:drawable/ic_lock_power_off" />
+
+                <TextView
+                    android:id="@+id/txtLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:alpha="0.8"
+                    android:text="@string/sign_in"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</ScrollView>
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        />
+</FrameLayout>

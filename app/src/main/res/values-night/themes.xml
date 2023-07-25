@@ -1,0 +1,39 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.DreamAI" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimary</item>
+        <item name="colorOnPrimary">@color/black</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryColor</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <item name="searchViewStyle">@style/CustomSearchView</item>
+
+
+        <item name="bottomNavigationStyle">@style/Widget.MaterialComponents.BottomNavigationView.Colored</item>
+        <!-- Customize your theme here. -->
+    </style>
+    <style name="CustomSearchView" parent="Widget.AppCompat.SearchView">
+        <!-- Set text color for the hint -->
+        <item name="android:textColorHint">@color/searchview_hint_color</item>
+    </style>
+    <color name="searchview_hint_color">#A0A0A0</color>
+
+
+    <style name="TextView">
+        <item name="android:textColor" >@color/black</item>
+
+    </style>
+    <style name="Theme.DreamAI.NoActionBar" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.DreamAI.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.DreamAI.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+</resources>

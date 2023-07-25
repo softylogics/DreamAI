@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/navigation_journal">
+
+    <fragment
+        android:id="@+id/favorite_detail"
+        android:name="com.softylogics.dreamai.FavoriteDetailFragment"
+        android:label="@string/DreamAI"
+
+        tools:layout="@layout/fragment_favorite_detail">
+
+
+        <action
+            android:id="@+id/action_favorite_detail_to_favorite"
+            app:destination="@id/favorite" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/favorite"
+        android:name="com.softylogics.dreamai.Favorites"
+        android:label="@string/DreamAI"
+
+        tools:layout="@layout/favorite_fragment">
+
+
+        <action
+            android:id="@+id/action_favorite_to_navigation_more"
+            app:destination="@id/navigation_more" />
+
+        <action
+            android:id="@+id/action_favorite_to_favorite_detail"
+            app:destination="@id/favorite_detail" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/history_detail"
+        android:name="com.softylogics.dreamai.HistoryDetailFragment"
+        android:label="@string/DreamAI"
+
+        tools:layout="@layout/fragment_history_detail">
+
+
+        <action
+            android:id="@+id/action_history_detail_to_navigation_history"
+            app:destination="@id/navigation_history" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_journal"
+        android:name="com.softylogics.dreamai.JournalFragment"
+        android:label="@string/DreamAI"
+        tools:layout="@layout/fragment_journal">
+
+
+        <action
+            android:id="@+id/action_navigation_journal_to_navigation_history"
+            app:destination="@id/navigation_history" />
+        <action
+            android:id="@+id/action_navigation_journal_to_navigation_more"
+            app:destination="@id/navigation_more" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_more"
+        android:name="com.softylogics.dreamai.MoreFragment"
+        android:label="@string/DreamAI"
+        tools:layout="@layout/fragment_more">
+
+
+        <action
+            android:id="@+id/action_navigation_more_to_navigation_journal"
+            app:destination="@id/navigation_journal" />
+        <action
+            android:id="@+id/action_navigation_more_to_favorite"
+            app:destination="@id/favorite" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.softylogics.dreamai.History"
+        android:label="@string/DreamAI"
+        tools:layout="@layout/history_fragment">
+
+        <action
+            android:id="@+id/action_navigation_history_to_navigation_journal"
+            app:destination="@id/navigation_journal" />
+        <action
+            android:id="@+id/action_navigation_history_to_history_detail"
+            app:destination="@id/history_detail" />
+    </fragment>
+
+</navigation>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "935340265303",
+    "project_id": "dreamai-35520",
+    "storage_bucket": "dreamai-35520.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:935340265303:android:d072b674d729ca7e83f812",
+        "android_client_info": {
+          "package_name": "com.softylogics.dreamai"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "935340265303-fkasmice2n1tiscglc3d20bnq9790t3p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjBvlo7--3cp-Ki_p_iZUCvMZHeXfjJ2c"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "935340265303-fkasmice2n1tiscglc3d20bnq9790t3p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,78 @@
+<resources>
+    <string name="app_name">DreamAI</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="recent_history">History</string>
+    <string name="guest_user">Guest User</string>
+    <string name="dream">write a dream here</string>
+    <string name="interpret">Interpret Dream</string>
+    <string name="log_off">Log Off</string>
+    <string name="navigation_drawer_open">Open Navigation Drawer</string>
+    <string name="navigation_drawer_close">Close Navigation Drawer</string>
+    <string name="DreamAI">DreamAI</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="welcome">"Welcome!"</string>
+    <string name="invalid_username">Not a valid username</string>
+    <string name="invalid_password">Password must be > 5 characters</string>
+    <string name="login_failed">"Login failed"</string>
+    <string name="log_in">Log In</string>
+    <string name="title_activity_main2">MainActivity2</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="dream_diary" translatable="false">Dream Diary</string>
+    <string name="dream_journal">Dream Journal</string>
+    <string name="more">More</string>
+    <string name="select_all">Select All</string>
+    <string name="delete_selected">Delete Selected</string>
+    <string name="share_selected">Share Selected</string>
+    <string name="mark_as_favorite">Mark as Favourite</string>
+    <string name="my_favorite_interpretations">My Favorite Interpretations</string>
+    <string name="to_access_the_favorites_feature_please_sign_in_to_your_account_in_settings_window">To access the favorites feature, please sign in to your account in settings window.</string>
+    <string name="user_icon">User Icon</string>
+    <string name="ai_dream_interpreter_icon">AI Dream Interpreter Icon</string>
+    <string name="share">Share</string>
+    <string name="app_icon">App Icon</string>
+    <string name="bakwas">Share your dreams\nUnlock their hidden meanings with the power of AI</string>
+    <string name="tap_to_edit">Tap to Edit</string>
+    <string name="type_your_dream_here">Type your dream here...</string>
+    <string name="interesting_reads">Interesting Reads</string>
+    <string name="dream_symbol_guide">Dream Symbol Guide</string>
+    <string name="dream_interpretation_guide">Dream Interpretation Guide</string>
+    <string name="manage_subscriptions">Manage Subscriptions</string>
+    <string name="unlock_premium_feature">Unlock Premium Feature</string>
+    <string name="restore_subscription">Restore Subscription</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="user_hub">User Hub</string>
+    <string name="share_with_a_friend">Share with a Friend</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="rate_the_app">Rate the App</string>
+    <string name="sign_in">Sign In</string>
+    <string name="delete_items">Delete Items</string>
+    <string name="to_access_the_history_feature_please_sign_in_to_your_account_in_settings_window">To access the history feature, please sign in to your account in settings window.</string>
+    <string name="check_box_placeholder">Check Box Placeholder</string>
+    <string name="check_placeholder">Box Placeholder</string>
+    <string name="sample_date">17 Apr 2023 - 07-28</string>
+    <string name="sample_text_dream">Title</string>
+    <string name="sample_text_interpretation">Detail</string>
+    <string name="mic">Microphone</string>
+    <string name="send_dream">Send Dream For Interpretation</string>
+    <string name="type_dream_here">Type Dream Here</string>
+    <string name="feedback"><![CDATA[Feedback & Suggestions]]></string>
+    <string name="sampleADSAPPID">ca-app-pub-3940256099942544~3347511713</string>
+    <string name="ADSAPPID">ca-app-pub-1707144442578049~2113984561</string>
+
+
+
+</resources>

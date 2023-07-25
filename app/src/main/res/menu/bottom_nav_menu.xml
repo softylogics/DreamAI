@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_journal"
+        android:icon="@drawable/icon_home"
+
+        android:iconTint="@color/textlayout"
+        android:title="@string/dream_journal" />
+
+    <item
+        android:id="@+id/navigation_history"
+        android:icon="@drawable/icon_history"
+        android:iconTint="@color/textlayout"
+        android:title="@string/dream_diary" />
+
+    <item
+        android:id="@+id/navigation_more"
+        android:icon="@drawable/baseline_settings_24"
+        android:iconTint="@color/textlayout"
+        android:title="@string/more" />
+
+</menu>

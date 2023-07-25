@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+
+
+    tools:context=".History">
+    <LinearLayout
+        android:id="@+id/roundedLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="10dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        >
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/my_favorite_interpretations"
+            android:textColor="@color/primary"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:gravity="center" />
+
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/linearlayoutborder"
+        android:layout_margin="10dp"
+
+        app:queryHint="Explore interpretation here..."
+        app:iconifiedByDefault="false"
+  />
+
+
+    <FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/txtMessage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:textSize="15sp"
+        android:layout_margin="10dp"
+        android:gravity="center"
+        android:visibility="gone"
+        android:fontFamily="sans-serif-light"
+
+        android:text="@string/to_access_the_favorites_feature_please_sign_in_to_your_account_in_settings_window"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/listRec"
+        android:name="com.softylogics.dreamai.ui.login.History"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="LinearLayoutManager"
+        android:visibility="gone"
+        tools:context=".History"
+
+        tools:listitem="@layout/layout_history_item" />
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            android:layout_gravity="center"
+
+            />
+
+    </FrameLayout>
+</LinearLayout>

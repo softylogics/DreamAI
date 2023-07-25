@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:textColor">@color/black</item>
+
+    </style>
+
+    <style name="AppTheme.Dark" parent="AppTheme">
+        <!-- Customize theme attributes for dark mode -->
+        <item name="bottomNavigationStyle">@style/BottomNavigationStyle.Light</item>
+    </style>
+    <style name="AppTheme.Light" parent="AppTheme">
+        <!-- Customize theme attributes for light mode -->
+        <item name="bottomNavigationStyle">@style/BottomNavigationStyle.Light</item>
+    </style>
+
+    <style name="CustomCheckbox" parent="@style/Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/checkbox_selector</item>
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:colorBackground">@color/colorPrimary</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    <style name="parent">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    <style name="popup.PopupMenu" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@color/colorPrimary</item>
+    </style>
+    <style name="modifiedEditText" parent="parent">
+        <item name="android:textSize">@dimen/newsMoreTextSize</item>
+        <item name="android:backgroundTint">@color/primaryTextColor</item>
+    </style>
+
+
+
+
+
+    <style name="BottomNavigationStyle.Light" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_gravity">center</item> <!-- Center the BottomNavigationView within its parent -->
+        <item name="android:gravity">center_horizontal</item> <!-- Center the icons horizontally within the BottomNavigationView -->
+        <item name="android:background">@color/colorPrimary</item> <!-- Set a background color if needed -->
+    </style>
+
+    <style name="MyTextInputLayout">
+
+        <item name="android:textColor">@color/primary</item>
+    </style>
+</resources>

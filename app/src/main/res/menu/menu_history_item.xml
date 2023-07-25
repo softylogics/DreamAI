@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/menu_view_detail"
+        android:icon="@drawable/user_icon"
+        android:title="View Detail"
+        />
+    <item
+        android:id="@+id/menu_share"
+        android:title="Share" />
+    <item
+        android:id="@+id/menu_mark_favorite"
+        android:title="Mark as Favorite" />
+    <item
+        android:id="@+id/menu_delete"
+        android:title="Delete" />
+</menu>

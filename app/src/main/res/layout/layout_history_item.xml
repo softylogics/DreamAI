@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/historyItemRootView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:background="@drawable/linearlayoutborder"
+    android:gravity="center"
+    android:orientation="horizontal">
+
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        style="@style/CustomCheckbox"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:visibility="gone"
+        android:layout_gravity="center"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="16dp"
+        android:alpha="0.9" />
+
+    <ImageView
+        android:id="@+id/dot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:alpha="0.2"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="16dp"
+        android:contentDescription="@string/check_placeholder"
+        android:src="@drawable/dot" />
+
+
+    <RelativeLayout
+        android:id="@+id/dreamItemHistory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <!--            <ImageView-->
+        <!--                android:id="@+id/kebab_menu"-->
+        <!--                android:layout_width="24dp"-->
+        <!--                android:layout_height="24dp"-->
+        <!--                android:src="@drawable/kebab_menu"-->
+        <!--                android:alpha="0.5"-->
+        <!--                app:tint="@color/primary"-->
+        <!--                android:layout_alignParentEnd="true"/>-->
+        <TextView
+            android:id="@+id/dateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:alpha="0.7"
+            android:text="@string/sample_date"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+
+            android:textStyle="bold" />
+
+        <ImageButton
+
+            android:id="@+id/ivShare"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="60dp"
+            android:layout_toStartOf="@id/ivFav"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/share"
+
+            android:src="@drawable/baseline_share_24"
+            app:tint="@color/primary" />
+
+
+        <ImageButton
+
+            android:id="@+id/ivFav"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentEnd="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/mark_as_favorite"
+
+            android:src="@drawable/baseline_favorite_border_24"
+            app:tint="@color/primary" />
+
+        <RelativeLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/dateTextView"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp">
+
+            <ImageView
+                android:id="@+id/titleIconImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="15dp"
+                android:background="@drawable/linearlayoutborder"
+
+                android:contentDescription="@string/user_icon"
+                android:padding="3dp"
+                android:src="@drawable/user_icon" />
+
+            <TextView
+                android:id="@+id/titleTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/titleIconImageView"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/sample_text_dream"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/detailLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/titleLayout"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/detailIconImageView"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="15dp"
+
+                android:contentDescription="@string/ai_dream_interpreter_icon"
+                android:src="@drawable/logo" />
+
+            <TextView
+                android:id="@+id/detailTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@+id/detailIconImageView"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:text="@string/sample_text_interpretation"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</LinearLayout>
