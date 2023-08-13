@@ -91,6 +91,7 @@ public class JournalFragment extends Fragment {
     // dark mode colors
     // add functionality for google action
     // hotpot ai attribution
+    // db local synch when internet
 
 
 
@@ -100,16 +101,17 @@ public class JournalFragment extends Fragment {
 
     private DreamViewModel viewModel;
     private InterstitialAd interstitialAd;
-    private boolean CheckEditText;
+
     private Handler handler;
     private boolean doubleBackToExitPressedOnce = false;
 
     private SpeechRecognizer speechRecognizer;
     private JSONObject jsonResponse;
     private NavController navController;
-    private String interpretation;
-    private String responseAI;
+
+
     private boolean requestingAd = false;
+    private boolean isFragmentAttached = false;
 
     @Override
     public View onCreateView(
@@ -307,9 +309,11 @@ public class JournalFragment extends Fragment {
 //        });
 
         speechRecognizer = SpeechRecognizer.createSpeechRecognizer(getActivity());
-if(!UserPreferences.getBoolean(NEVER_REMIND_SIGNIN)) {
-    showSignInReminderDialog();
-}
+        if(account==null) {
+            if (!UserPreferences.getBoolean(NEVER_REMIND_SIGNIN)) {
+                showSignInReminderDialog();
+            }
+        }
     }
 
     private void checkSpeechToTextPermission() {
@@ -566,14 +570,14 @@ if(!UserPreferences.getBoolean(NEVER_REMIND_SIGNIN)) {
 //    }
 
     private void callAPI(String prompt) {
-        responseAI = "";
+
         JSONObject requestBody = new JSONObject();
         JSONArray messages = new JSONArray();
         JSONObject system = new JSONObject();
         JSONObject user = new JSONObject();
         try {
             system.put("role", "system");
-            system.put("content" , "You are a dream interpreter, please ignore any nonsensical query and if the letters are gibberish or any explicit or other unlawful talk and send a warning to try again.");
+            system.put("content" , "You are a dream interpreter, please reply in only english alphabets. Do not reply in gibberish or use any symbols in your reply. please ignore any nonsensical query and if the letters are gibberish or any explicit or other unlawful talk and send a warning to try again.");
 
             user.put("role", "user");
             user.put("content" , prompt);
@@ -594,26 +598,33 @@ if(!UserPreferences.getBoolean(NEVER_REMIND_SIGNIN)) {
         JsonObjectRequest request = new JsonObjectRequest(Request.Method.POST, API_ENDPOINT, requestBody, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
-                try {
 
+                try {
+                    Log.d("attach", isFragmentAttached +"");
                     String text = response.getJSONArray("choices").getJSONObject(0).getJSONObject("message").getString("content").trim();
-                    handleInterpretation(text);
+                    if(isFragmentAttached) {
+                        handleInterpretation(text);
+                    }
                     Log.e("API Response", response.toString());
 //                    Toast.makeText(getActivity(),text,Toast.LENGTH_SHORT).show();
 
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
+
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                Log.d("attach", isFragmentAttached +"");
+                if(isFragmentAttached){
                 showToast("An error occurred, try again in a few minutes");
                 binding.progressBar.setVisibility(View.GONE);
                 binding.dreamInput.setEndIconVisible(true);
                 binding.dreamInput.setEndIconActivated(true);
                 binding.btnMic.setEnabled(true);
                 error.printStackTrace();
+                }
             }
         }) {
             @Override
@@ -761,7 +772,6 @@ if(!UserPreferences.getBoolean(NEVER_REMIND_SIGNIN)) {
             public void onClick(DialogInterface dialog, int which) {
                 showInterpretation(viewModel.getSelectedItem().getValue().getInterpretation());
                 dialog.dismiss();
-
             }
         });
         builder.setNegativeButton("Never Remind", new DialogInterface.OnClickListener() {
@@ -985,10 +995,26 @@ if(!UserPreferences.getBoolean(NEVER_REMIND_SIGNIN)) {
     @Override
     public void onStop() {
         super.onStop();
+        Log.d("attach", isFragmentAttached +"");
+        isFragmentAttached = false;
         if (handler != null) {
             handler.removeCallbacksAndMessages(null);
         }
+
+
+    }
+
+    @Override
+    public void onAttach(@NonNull Context context) {
+        super.onAttach(context);
+        Log.d("attach", isFragmentAttached +"");
+        isFragmentAttached = true;
     }
 
 
+    @Override
+    public void onDetach() {
+
+        super.onDetach();
+    }
 }

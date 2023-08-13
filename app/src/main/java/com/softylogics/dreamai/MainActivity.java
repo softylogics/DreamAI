@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     public static int dreamCounter = 0;
     private static final String TAG = "In-App Updates";
     private AppBarConfiguration mAppBarConfiguration;
-    private BillingClientHelper billingClientHelper;
+
     private ActivityMainBinding binding;
 
     private GoogleSignInOptions gso;
@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
 
     public static int activeFragment = 0;
     public static String anonymousUserId;
+
+    public static BillingClientHelper billingClientHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -105,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
 
         account = isUserSignedIn();
         billingClientHelper = new BillingClientHelper(this);
+        billingClientHelper.startConnection();
         if(!UserPreferences.getBoolean(Constants.IS_PURCHASED)) {
             if (billingClientHelper.restoreSubscriptions()) {
                 UserPreferences.setBoolean(Constants.IS_PURCHASED, true);

@@ -4,6 +4,7 @@ import static com.softylogics.dreamai.Constants.CONST_SIGN_IN;
 import static com.softylogics.dreamai.MainActivity.account;
 import static com.softylogics.dreamai.MainActivity.activeFragment;
 import static com.softylogics.dreamai.MainActivity.anonymousUserId;
+import static com.softylogics.dreamai.MainActivity.billingClientHelper;
 
 import android.content.ActivityNotFoundException;
 import android.content.ClipboardManager;
@@ -47,7 +48,7 @@ public class MoreFragment extends Fragment implements SharedPreferences.OnShared
     private GoogleSignInOptions gso;
     private GoogleSignInClient mGoogleSignInClient;
 
-   BillingClientHelper billingClientHelper;
+
 
 
 
@@ -67,8 +68,7 @@ public class MoreFragment extends Fragment implements SharedPreferences.OnShared
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        billingClientHelper = new BillingClientHelper(getContext());
-        billingClientHelper.startConnection();
+
         UserPreferences.init(getContext());
         UserPreferences.getPrefs().registerOnSharedPreferenceChangeListener(this);
         binding.loginOut.setOnClickListener(this);
@@ -227,8 +227,12 @@ public class MoreFragment extends Fragment implements SharedPreferences.OnShared
         if (v.getId() == R.id.txtBuyPremium) {
             if(billingClientHelper.getClient().isReady()) {
                 if (!UserPreferences.getBoolean(Constants.IS_PURCHASED)) {
-                    billingClientHelper.startPurchaseFlow(getActivity());
-
+                    if(billingClientHelper.getClient().isReady()) {//todo: test this
+                        billingClientHelper.startPurchaseFlow(getActivity());
+                    }
+                    else{
+                        showToast("There was an error in starting the billing process, please try again after some time");
+                    }
 //                    if(UserPreferences.getBoolean(Constants.IS_PURCHASED)){
 //                        binding.txtBuyPremium.setEnabled(false);
 //                        binding.txtBuyPremium.setAlpha(0.5f);

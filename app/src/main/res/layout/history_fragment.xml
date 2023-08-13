@@ -10,7 +10,7 @@
 
     tools:context=".History">
     <LinearLayout
-       android:id="@+id/roundedLayout"
+        android:id="@+id/roundedLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
@@ -39,7 +39,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
 
             android:src="@drawable/baseline_delete_24"
-           android:alpha="0"
+            android:alpha="0"
 
 
             app:tint="@color/primary"
@@ -66,35 +66,35 @@
         android:layout_margin="10dp"
         app:queryHint="Search your dreams here..."
         app:iconifiedByDefault="false"
-  />
+        />
 
 
     <FrameLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TextView
-        android:id="@+id/txtMessage"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textSize="15sp"
-        android:layout_margin="10dp"
-        android:gravity="center"
-        android:visibility="gone"
-        android:fontFamily="sans-serif-light"
-        android:textColor="@color/black"
-        android:text="@string/to_access_the_history_feature_please_sign_in_to_your_account_in_settings_window"/>
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/txtMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="15sp"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            android:text="@string/to_access_the_history_feature_please_sign_in_to_your_account_in_settings_window"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/listRec"
-        android:name="com.softylogics.dreamai.ui.login.History"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layoutManager="LinearLayoutManager"
-        android:visibility="gone"
-        tools:context=".History"
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/listRec"
+            android:name="com.softylogics.dreamai.ui.login.History"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layoutManager="LinearLayoutManager"
+            android:visibility="gone"
+            tools:context=".History"
 
-        tools:listitem="@layout/layout_history_item" />
+            tools:listitem="@layout/layout_history_item" />
         <ProgressBar
             android:id="@+id/progressBar"
             android:layout_width="wrap_content"

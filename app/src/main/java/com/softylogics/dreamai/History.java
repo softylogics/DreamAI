@@ -57,11 +57,11 @@ public class History extends Fragment implements SetOnClickListener {
 
     private Context c;
     private NavController navController;
-    private int items = 0;
     private boolean itemRemoved = false;
     private boolean markedFavUnFav = false;
     private boolean allSelected = false;
     private boolean historyChecked;
+    private int items = 0;
 
     @Nullable
     @Override
@@ -464,7 +464,7 @@ public class History extends Fragment implements SetOnClickListener {
                 binding.roundedLayout.animate().translationY(0).setDuration(200).start();
             }
         });
-
+ 
     }
 
 

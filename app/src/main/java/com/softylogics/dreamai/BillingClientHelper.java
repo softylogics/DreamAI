@@ -21,6 +21,7 @@ import com.android.billingclient.api.QueryProductDetailsParams;
 import com.android.billingclient.api.QueryPurchasesParams;
 import com.google.common.collect.ImmutableList;
 
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -104,6 +105,7 @@ public class BillingClientHelper implements PurchasesUpdatedListener {
                 if (billingResult.getResponseCode() ==  BillingClient.BillingResponseCode.OK) {
                     Log.d("billing", "Connection setup finished");
                     // The BillingClient is ready. You can query purchases here.
+
                     queryProductsDetails();
                     queryPurchases();
                 }
@@ -176,7 +178,7 @@ public class BillingClientHelper implements PurchasesUpdatedListener {
 
 
     public void startPurchaseFlow(Activity activity){
-        assert this.productList.get(0).getSubscriptionOfferDetails() != null;
+        //assert this.productList.get(0).getSubscriptionOfferDetails() != null;
         ImmutableList<BillingFlowParams.ProductDetailsParams> productDetailsParamsList =
                 ImmutableList.of(
                         BillingFlowParams.ProductDetailsParams.newBuilder()
