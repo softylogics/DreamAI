@@ -87,7 +87,6 @@ import java.util.Map;
 
 public class JournalFragment extends Fragment {
     // todo: pivot point or shrink animation
-
     // dark mode colors
     // add functionality for google action
     // hotpot ai attribution

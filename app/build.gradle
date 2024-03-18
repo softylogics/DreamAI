@@ -37,8 +37,8 @@ android {
         applicationId "com.softylogics.dreamai"
         minSdk 23
         targetSdk 33
-        versionCode 29
-        versionName "1.29"
+        versionCode 30
+        versionName "1.30"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -89,6 +89,7 @@ dependencies {
     implementation 'com.android.volley:volley:1.2.1'
     implementation 'androidx.core:core-splashscreen:1.0.1'
     implementation "androidx.preference:preference:1.2.0"
+    implementation 'com.google.firebase:firebase-config:21.0.2'
 
     testImplementation 'junit:junit:4.13.2'
     implementation 'com.google.android.play:app-update:2.0.1'

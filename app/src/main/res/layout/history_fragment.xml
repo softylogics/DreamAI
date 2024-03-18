@@ -32,8 +32,9 @@
 
         <ImageButton
             android:id="@+id/delete_selected"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:padding="24dp"
             android:layout_marginStart="8dp"
             android:layout_marginEnd="10dp"
             android:background="?attr/selectableItemBackgroundBorderless"
@@ -44,16 +45,18 @@
 
             app:tint="@color/primary"
             android:contentDescription="@string/delete_items" />
-        <Button
+        <ImageButton
             android:id="@+id/select_all"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
-            app:tint="@color/black"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            app:tint="@color/primary"
             android:alpha="0"
+            android:padding="24dp"
             android:contentDescription="@string/select_all"
             android:layout_marginEnd="10dp"
-            android:background="@drawable/baseline_select_all_24"
-            android:layout_marginStart="8dp" />
+            android:src="@drawable/baseline_select_all_24"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            />
 
 
     </LinearLayout>
@@ -61,7 +64,7 @@
     <androidx.appcompat.widget.SearchView
         android:id="@+id/searchView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="55dp"
         android:background="@drawable/linearlayoutborder"
         android:layout_margin="10dp"
         app:queryHint="Search your dreams here..."
